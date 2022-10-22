@@ -4,11 +4,14 @@ import { Star } from "../Star";
 import styles from './Sky.module.scss';
 
 const SkyView = (props) => {
-  const {} = props;
+  const {stars, changeSky} = props;
+
   return (
-    <div className={styles._}>
+    <div className={styles._} onClick={() => changeSky()}>
       <Moon />
-      <Star />
+      {stars.map((star, index) => (
+        <Star key={'star_' + index} />
+      ))}
     </div>
   );
 };
