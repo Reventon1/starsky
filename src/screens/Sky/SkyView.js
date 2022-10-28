@@ -7,10 +7,10 @@ const SkyView = (props) => {
   const {stars, changeSky} = props;
 
   return (
-    <div className={styles._} onClick={() => changeSky()}>
+    <div className={styles._} onClick={event => changeSky(event) }>
       <Moon />
       {stars.map((star, index) => (
-        <Star key={'star_' + index} />
+        <Star star={star} key={'star_' + index}/>
       ))}
     </div>
   );

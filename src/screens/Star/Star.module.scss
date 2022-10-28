@@ -1,6 +1,36 @@
 ._ {
-    height: 12px;
-    width: 12px;
+    height: 6px;
+    width: 6px;
     background-color: white;
     border-radius: 50%;
+    position: absolute;
+    animation: starblink infinite 2s;
+    @keyframes starblink {
+        0% {
+            opacity: 1;
+            transform: scale(0.5);
+        }
+
+        20% {
+            opacity: 0.75;
+        }
+
+        40% {
+            opacity: 0.5;
+        }
+
+        60% {
+            opacity: 0.25;
+            transform: scale(1);
+        }
+
+        80% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(0.5);
+        }
+    }
 }
