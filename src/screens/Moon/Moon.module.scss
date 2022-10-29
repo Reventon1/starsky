@@ -2,7 +2,44 @@
     position: absolute;
     top: 25%;
     left: 25%;
-    transform: rotate(-45deg);
+    // transform: rotate(-45deg);
     height: 72px;
     width: 72px;
+
+    animation: moon infinite 8s;
+    @keyframes moon {
+        0% {
+            transform: rotate(-45deg);
+        }
+
+        20% {
+            transform: rotate(-52deg);
+        }
+
+        40% {
+            transform: rotate(-45deg);
+        }
+
+        60% {
+            transform: rotate(-52deg);
+        }
+
+        80% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: rotate(-52deg);
+        }
+    }
+}
+
+.light{
+    box-shadow: 5px 5px 70px 20px yellow ;
+    border-radius: 50%;
+    top: 40%;
+    left: 40%;
+    width: 1px;
+    height: 1px;
+    position: absolute;
 }
